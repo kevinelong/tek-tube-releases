@@ -8,6 +8,25 @@ directory.  Those are a third-party historical collection kept for personal use 
 source repository's `NOTICE.md`), so they are neither redistributed here nor bundled into
 the archive; clone the source repository to get them.
 
+## v0.3.1 — 2026-10-12
+
+**A click is one press.**  A click on a list stepped it once per frame the button was down —
+and a real click lasts several frames, so one click on a three-entry list moved six entries,
+which reads as a random choice rather than the next one; a box flipped once per frame, so the
+release decided it by the parity of the click's length.  The press is taken from the button's
+**edge** now.  Only a slider follows the button while it is down, which is what a drag is.
+The same bug made a held click on a launch row (`zoom`) re-execute the program every frame.
+The keyboard was already right — the window loop compares each panel key against the previous
+frame's key states — so held arrows and a held Enter were never repeats.
+
+| | |
+|---|---|
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `920d54e` |
+| Asset | `tek-tube-0.3.1-win64.zip` |
+| Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
+| Tests at build time | `cargo test` — 119 passed, 0 failed, 2 ignored |
+| `tek-tube.exe` | 945,152 bytes, SHA-256 `25dc2e7a5b39cfc0b6b08b2aeeb850e9691dc5054eafb73bddeb127781b0cabc` |
+
 ## v0.3.0 — 2026-10-12
 
 **A face change is a page, not a session, and a list can be browsed.**  Two panel changes,
