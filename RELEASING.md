@@ -23,10 +23,12 @@ download page and a change log.  To publish a build:
    sha256sum target/release/tek-tube.exe
    ```
 
-3. **Assemble the archive** — `tek-tube.exe` plus `README.txt`, `LICENSE.txt`,
-   `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt`.  The three text files are copies of
-   `LICENSE.md`, `NOTICE.md` and `THIRD-PARTY-NOTICES.txt` in this repository (the
-   licence terms must travel with the binary, so the archive carries text, not links).
+3. **Assemble the archive** — `tek-tube.exe` plus the four text files it ships.
+   `README.txt` is [`archive/README.txt`](./archive/README.txt) in this repository, kept
+   here so the next release does not have to compose it again (bump the version and the
+   archive name inside it); `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` are
+   copies of `LICENSE.md`, `NOTICE.md` and `THIRD-PARTY-NOTICES.txt` here — the licence
+   terms must travel with the binary, so the archive carries text, not links.
    `THIRD-PARTY-NOTICES.txt` is regenerated whenever the dependency list changes:
 
    ```sh
