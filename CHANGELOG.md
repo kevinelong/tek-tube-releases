@@ -8,6 +8,33 @@ directory.  Those are a third-party historical collection kept for personal use 
 source repository's `NOTICE.md`), so they are neither redistributed here nor bundled into
 the archive; clone the source repository to get them.
 
+## v0.3.0 — 2026-10-12
+
+**A face change is a page, not a session, and a list can be browsed.**  Two panel changes,
+both from the same complaint: stepping the `font` list in the F2 panel restarted the
+program, so the list could not be walked and the choice had to be made blind — one wheel
+notch ended the session.
+
+- The face is a **rendering** row now.  The tube holds the face, so changing it configures
+  the tube again and writes the page again in the new face — the same recipe the cell size
+  already used — and the shell underneath never notices.
+- A **launch** row (`device`, `zoom`, `shrink`, in the plot path) is honoured only by a
+  *press*: Enter, or a click on the row.  The wheel walks the list, changes nothing but the
+  number shown, and the note line says what a press would do instead.
+
+Measured through the terminal harness with no window, one page and one session: `mono` →
+`simplex` moved the lit pixels 21594 → 37525, asking for the same face twice moved them
+21594 → 20704 (so the number follows the face and not the rewrite), and a command typed
+after four face changes was answered by the shell it was typed into.
+
+| | |
+|---|---|
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `93bfd48` |
+| Asset | `tek-tube-0.3.0-win64.zip` |
+| Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
+| Tests at build time | `cargo test` — 117 passed, 0 failed, 2 ignored |
+| `tek-tube.exe` | 944,640 bytes, SHA-256 `2acd716caf65b426b147519dc4db79ef95cd68a66b23ac21dcdc7c8c15428422` |
+
 ## v0.2.0 — 2026-10-12
 
 **tek terminal in the Start Menu, and a setup that asks which shells to offer.**  The

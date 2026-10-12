@@ -26,7 +26,7 @@ the measurements against real hardware, and how to drive it from a pipe.)
 
 | File | What it is |
 |---|---|
-| `tek-tube-0.2.0-win64.zip` | `tek-tube.exe` plus `setup.cmd`/`setup.ps1`, `uninstall.cmd`/`uninstall.ps1`, `README.txt`, `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` |
+| `tek-tube-<version>-win64.zip` | `tek-tube.exe` plus `setup.cmd`/`setup.ps1`, `uninstall.cmd`/`uninstall.ps1`, `README.txt`, `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` |
 | `SHA256SUMS.txt` | SHA-256 of every file in the release |
 
 Windows 10 or 11, 64-bit.  No runtime to install and no administrator is needed: the
@@ -135,7 +135,7 @@ README explains why typing into a *plot file* is not interactive and what `--she
 Each release carries `SHA256SUMS.txt`.  In PowerShell or `cmd`:
 
 ```sh
-certutil -hashfile tek-tube-0.1.0-win64.zip SHA256
+certutil -hashfile tek-tube-<version>-win64.zip SHA256
 ```
 
 The hash must match the line for that file.  In Git Bash or WSL, `sha256sum -c

@@ -1,4 +1,4 @@
-tek-tube 0.1.0 - a Tektronix 4010/4014 storage tube on your screen
+tek-tube 0.3.0 - a Tektronix 4010/4014 storage tube on your screen
 ==================================================================
 
 WHAT THIS IS
@@ -48,7 +48,7 @@ A WHOLE SHELL ON THE TUBE
        Get-Process | Format-Table | Out-String | tek-tube.exe -
 
 VERIFY THIS DOWNLOAD
-       certutil -hashfile tek-tube-0.1.0-win64.zip SHA256
+       certutil -hashfile tek-tube-0.3.0-win64.zip SHA256
   and compare with SHA256SUMS.txt in the same release.  In Git Bash or WSL,
   sha256sum -c SHA256SUMS.txt checks the whole release.
 
