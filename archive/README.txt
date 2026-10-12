@@ -34,7 +34,7 @@ INSTALL IT (START MENU AND SHELLS)
 
        setup.cmd
        setup.cmd -List                 what shells were found
-       setup.cmd -Shells "Windows PowerShell","Git Bash" -Default "Git Bash"
+       setup.cmd -Shells "Windows PowerShell,Git Bash" -Default "Git Bash"
        uninstall.cmd                   remove it again (-Purge: settings too)
 
   The entries pass a shell *name*; the names and their commands live in

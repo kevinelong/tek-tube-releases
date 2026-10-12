@@ -27,7 +27,7 @@ default, and `--list-shells` and `--version` report what is configured and what 
 
 | | |
 |---|---|
-| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `00a5e96` |
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `e07faa8` |
 | Asset | `tek-tube-0.2.0-win64.zip` |
 | Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
 | Tests at build time | `cargo test` — 114 passed, 0 failed, 2 ignored |

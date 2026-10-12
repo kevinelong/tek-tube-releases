@@ -49,7 +49,7 @@ Unzip anywhere and run **`setup.cmd`**.  That is the whole installation:
 ```sh
 setup.cmd                       # ask which shells to offer
 setup.cmd -List                 # print the shells found on this machine
-setup.cmd -Shells "Windows PowerShell","Git Bash" -Default "Git Bash"
+setup.cmd -Shells "Windows PowerShell,Git Bash" -Default "Git Bash"
 setup.cmd -InstallDir C:\tools\tek-tube -NoShortcuts   # install, no Start Menu entries
 uninstall.cmd                   # remove it again (-Purge also removes your settings)
 ```
