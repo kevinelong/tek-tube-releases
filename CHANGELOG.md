@@ -8,6 +8,29 @@ directory.  Those are a third-party historical collection kept for personal use 
 source repository's `NOTICE.md`), so they are neither redistributed here nor bundled into
 the archive; clone the source repository to get them.
 
+## v0.3.3 — 2026-10-12
+
+**The cursor is stroked like the font's own ink.**  The steady mark the last release added
+was a rectangle of light two dots thick with hard edges, drawn in the settled green — too
+thin, too crisp, and nothing like a rendered underscore.  It is a *stroke* now: deposited
+through the same Gaussian beam profile a stroke deposits charge with, at the stroke width the
+terminal's own glyphs are stroked with, and carrying a *fresh* stroke's level in both
+channels — the total light and the fresh channel the colour pass reads for the hot
+chromaticity, which is where the whiteness of fresh ink on this tube comes from.  A host
+keeping its cursor written leaves it hot; this is what that looks like.
+
+Across the underline's own width (green channel, six dots either side of the centre line):
+`89, 90, 123, 164, 211, 250, 255, 251, 212, 164, 124, 88, 89` — a dome six dots wide rather
+than a two-dot step, peaking at 255 where a blank cell reads 76.
+
+| | |
+|---|---|
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `09357df` |
+| Asset | `tek-tube-0.3.3-win64.zip` |
+| Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
+| Tests at build time | `cargo test` — 122 passed, 0 failed, 2 ignored |
+| `tek-tube.exe` | 945,664 bytes, SHA-256 `f1a98a1b80cf4ed2b42a68b9d7514f685df27678221121ca3778442aa1a6b295` |
+
 ## v0.3.2 — 2026-10-12
 
 **The cursor is a steady mark, so it does not fade away.**  It was drawn as a transient
