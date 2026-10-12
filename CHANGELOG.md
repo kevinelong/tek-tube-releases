@@ -8,6 +8,31 @@ directory.  Those are a third-party historical collection kept for personal use 
 source repository's `NOTICE.md`), so they are neither redistributed here nor bundled into
 the archive; clone the source repository to get them.
 
+## v0.3.4 — 2026-10-12
+
+**No second black window beside the tube.**  Started the way the Start Menu starts it — a
+shortcut, a double click, Explorer, with no console to inherit — the program showed a console
+window of its own.  That is the Windows *console* subsystem doing its job: the executable is
+built as a console program on purpose, so a shell that runs `tek-tube --png out.png` waits for
+the file and its report appears where it was asked for, and Windows gives such a program a
+console when it has none.  That console was never the shell's: the shell runs under a
+pseudoconsole and has no window at all, and the only thing the console showed was the
+program's own session report.
+
+The window is now hidden, and only when it is ours — `GetConsoleProcessList` returning one
+entry distinguishes a console we were given from the one a shell provided, and a shell's is
+left exactly as it is.  Hidden rather than freed, because `FreeConsole` would invalidate the
+standard handles and the closing report would then fail rather than go to a console nobody
+can see.
+
+| | |
+|---|---|
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `a99ae5a` |
+| Asset | `tek-tube-0.3.4-win64.zip` |
+| Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
+| Tests at build time | `cargo test` — 123 passed, 0 failed, 2 ignored |
+| `tek-tube.exe` | 945,664 bytes, SHA-256 `9536ee851dbd059ba4486783782911036ab077fe4c39a32ce85ce7a24af35883` |
+
 ## v0.3.3 — 2026-10-12
 
 **The cursor is stroked like the font's own ink.**  The steady mark the last release added
