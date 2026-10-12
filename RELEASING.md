@@ -23,12 +23,16 @@ download page and a change log.  To publish a build:
    sha256sum target/release/tek-tube.exe
    ```
 
-3. **Assemble the archive** — `tek-tube.exe` plus the four text files it ships.
+3. **Assemble the archive** — `tek-tube.exe`, the Windows setup (`setup.cmd`,
+   `setup.ps1`, `uninstall.cmd`, `uninstall.ps1`), and the four text files it ships.
    `README.txt` is [`archive/README.txt`](./archive/README.txt) in this repository, kept
    here so the next release does not have to compose it again (bump the version and the
    archive name inside it); `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` are
    copies of `LICENSE.md`, `NOTICE.md` and `THIRD-PARTY-NOTICES.txt` here — the licence
-   terms must travel with the binary, so the archive carries text, not links.
+   terms must travel with the binary, so the archive carries text, not links.  The setup
+   scripts must keep CRLF line endings (`.gitattributes` in the source repository pins
+   them): cmd.exe reads a batch file block by block and the uninstaller's self-delete
+   depends on how it parses the last line.
    `THIRD-PARTY-NOTICES.txt` is regenerated whenever the dependency list changes:
 
    ```sh

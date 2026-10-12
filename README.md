@@ -26,13 +26,40 @@ the measurements against real hardware, and how to drive it from a pipe.)
 
 | File | What it is |
 |---|---|
-| `tek-tube-0.1.0-win64.zip` | `tek-tube.exe` (~910 KB) plus `README.txt`, `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` |
+| `tek-tube-0.2.0-win64.zip` | `tek-tube.exe` plus `setup.cmd`/`setup.ps1`, `uninstall.cmd`/`uninstall.ps1`, `README.txt`, `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` |
 | `SHA256SUMS.txt` | SHA-256 of every file in the release |
 
-No installer and no runtime to install: unzip it and run the `.exe`.  The executable is
-self-contained (the stroke fonts are compiled into it), so it runs from any directory and
-writes nothing outside your user config directory, where the options panel keeps its saved
-presets.
+Windows 10 or 11, 64-bit.  No runtime to install and no administrator is needed: the
+executable is self-contained (the stroke fonts are compiled into it).
+
+## Install it
+
+Unzip anywhere and run **`setup.cmd`**.  That is the whole installation:
+
+- it asks which shells the Start Menu should offer — the ones Windows Terminal would list on
+  the same machine: Windows PowerShell, PowerShell, Command Prompt, Git Bash, and one entry
+  per WSL distribution;
+- it copies `tek-tube.exe` and its licences into `%LOCALAPPDATA%\Programs\tek-tube`, nowhere
+  system-wide;
+- it puts **tek terminal** in the Start Menu for the shell you choose as the default, plus
+  one entry per shell, so **tek terminal (Git Bash)** opens the tube with Git Bash on it;
+- it writes the choice to `%APPDATA%\tek-tube\shells.txt`, so changing which shell an entry
+  runs is an edit to that one text file — no reinstall.
+
+```sh
+setup.cmd                       # ask which shells to offer
+setup.cmd -List                 # print the shells found on this machine
+setup.cmd -Shells "Windows PowerShell","Git Bash" -Default "Git Bash"
+setup.cmd -InstallDir C:\tools\tek-tube -NoShortcuts   # install, no Start Menu entries
+uninstall.cmd                   # remove it again (-Purge also removes your settings)
+```
+
+`tek-tube.exe --list-shells` prints what is configured, and a `tek-tube.exe` started with no
+arguments at all — a shortcut, a double click, the taskbar — runs the shell the file marks as
+`default`.
+
+Prefer not to install anything?  Unzip and run `tek-tube.exe` directly: one file, no setup,
+no Start Menu entry.
 
 macOS and Linux are not published here.  Both build from the source repository (see
 **Build it yourself** below); only the Windows build has been exercised.

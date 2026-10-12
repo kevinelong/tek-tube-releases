@@ -26,6 +26,21 @@ RUN IT
 
   With no file it prints its usage:      tek-tube.exe --help
 
+INSTALL IT (START MENU AND SHELLS)
+  setup.cmd asks which shells the Start Menu should offer - the ones Windows
+  Terminal would list on this machine - copies tek-tube into
+  %LOCALAPPDATA%\Programs\tek-tube, and puts "tek terminal" in the Start Menu for
+  the default shell plus one entry per shell.  No administrator is needed.
+
+       setup.cmd
+       setup.cmd -List                 what shells were found
+       setup.cmd -Shells "Windows PowerShell","Git Bash" -Default "Git Bash"
+       uninstall.cmd                   remove it again (-Purge: settings too)
+
+  The entries pass a shell *name*; the names and their commands live in
+  %APPDATA%\tek-tube\shells.txt, so changing one is an edit to that file.
+  "tek-tube.exe --list-shells" prints what is configured.
+
 A WHOLE SHELL ON THE TUBE
        tek-tube.exe --shell powershell.exe --device 4010
 

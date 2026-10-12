@@ -11,7 +11,7 @@ restriction, reproduced in NOTICE.md.
 
 Generated from `cargo tree -e normal` in the source repository with the licence files from
 the local cargo registry, for the release built from
-https://github.com/kevinelong/tek-tube commit 3d4ae7aa88309641e7c3b183a6d08010d6229ab2.
+https://github.com/kevinelong/tek-tube commit 00a5e960d8c71a9f82f1638512f30042dd4d896e.
 
 crate | version | licence expression
 ---|---|---
