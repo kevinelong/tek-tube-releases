@@ -8,6 +8,31 @@ directory.  Those are a third-party historical collection kept for personal use 
 source repository's `NOTICE.md`), so they are neither redistributed here nor bundled into
 the archive; clone the source repository to get them.
 
+## v0.3.2 — 2026-10-12
+
+**The cursor is a steady mark, so it does not fade away.**  It was drawn as a transient
+flash and only when something else changed, so within a second of the shell going quiet it
+decayed to the flood-gun floor and the tube sat there with no cursor at all until the next
+key.  Writing it again on a clock — the obvious fix, and the one asked for — was built and
+measured first and rejected on cost: a refreshed flash never lets the tube's aliveness check
+clear, so a 1024x780 frame would be recomposed ~58 times a second, forever, for one
+underline.  The cursor is instead a steady mark at stored-ink level, which is what the
+hardware's own hosts produced when they wrote a cursor as stored ink and redrew the page to
+move it: not charge (an erase does not blink it, moving it leaves no trail) and not a
+transient (an idle prompt still stops recomposing).
+
+Measured through the harness on an idle tube, the rendered frame's green channel sampled
+~1400 times over 6 s: this build reads **188** throughout against a blank-cell floor of 76;
+was **77** (the floor — the cursor gone) before.
+
+| | |
+|---|---|
+| Source | [kevinelong/tek-tube](https://github.com/kevinelong/tek-tube) @ `2e8ccce` |
+| Asset | `tek-tube-0.3.2-win64.zip` |
+| Built with | rustc 1.96.0 (ac68faa20 2026-05-25), `cargo build --release`, x86_64-pc-windows-msvc |
+| Tests at build time | `cargo test` — 122 passed, 0 failed, 2 ignored |
+| `tek-tube.exe` | 945,152 bytes, SHA-256 `18b4f36f59479be59d951ed018f9bd054a3a48306d99674f4c95f89b7c314470` |
+
 ## v0.3.1 — 2026-10-12
 
 **A click is one press.**  A click on a list stepped it once per frame the button was down —
