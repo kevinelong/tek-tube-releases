@@ -26,7 +26,7 @@ the measurements against real hardware, and how to drive it from a pipe.)
 
 | File | What it is |
 |---|---|
-| `tek-tube-0.1.0-win64.zip` | `tek-tube.exe` (~910 KB) plus `README.txt` and `NOTICE.txt` |
+| `tek-tube-0.1.0-win64.zip` | `tek-tube.exe` (~910 KB) plus `README.txt`, `LICENSE.txt`, `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` |
 | `SHA256SUMS.txt` | SHA-256 of every file in the release |
 
 No installer and no runtime to install: unzip it and run the `.exe`.  The executable is
